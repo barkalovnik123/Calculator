@@ -1,0 +1,170 @@
+:root {
+    --button-height: 58px;
+    --logo-height: 15%;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(61, 61, 61);
+}
+@media (orientation:portrait) {
+    body {
+        zoom: 250%;
+        overflow:hidden;
+        overflow-y:hidden;  /*для вертикального*/
+        overflow-x:hidden;  /*для горизонтального*/
+    }
+    #menu {
+        flex-wrap: wrap;
+    }
+    footer {
+        margin-bottom: 290%;
+    }
+}
+
+header {
+    display: flex;
+    background-color: rgb(75, 75, 75);
+    align-items: stretch;
+    box-shadow: 0 0 36px black;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+#menu a {
+    display: inline-block;
+    padding: calc(var(--logo-height) / 3.7) 2%;
+    white-space: nowrap;
+    border-right: 1px solid rgb(177, 177, 177);
+    color:rgb(224, 224, 224);
+    transition: 0.21s;
+}
+#menu a:hover {
+    transition: 0.34s;
+    color: white;
+    font-size: large;
+    text-shadow: white 0 0 2px;;
+    background-color: grey;
+}
+.logo-cont {
+    padding: 0;
+    margin-left: 0;
+}
+.logo-cont img {
+    height: 32px;
+    width: 96px;
+}
+
+main {
+    flex-grow: 1;
+}
+#calculator {
+    margin: 5% auto;
+    padding: 1% 0;
+    width: calc(var(--button-height)*6.5%);
+    text-align: center;
+    background-color: gray;
+    border-radius: 5%;
+    box-shadow: 0 0 50px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+}
+#calc_buttons div button {
+    width: var(--button-height);
+    height: var(--button-height);
+    margin: 1px;
+    border: 0;
+    border-radius: 14%;
+    font-size: large;
+
+    -webkit-filter: brightness(90%);
+    -moz-filter: brightness(90%);
+    -ms-filter: brightness(90%);
+    -o-filter: brightness(90%);
+    filter: brightness(95%);
+}
+#calc_buttons div button:hover {
+    transition: 0.1s;
+    cursor: pointer;
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -ms-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    filter: brightness(100%);
+}
+#display {
+    height: var(--button-height);
+    background-color: rgb(196, 196, 196);
+    border-radius: 14%;
+    margin-bottom: 2%;
+}
+#display p {
+    text-align: right;
+    font: arial;
+    margin-right: 10px;
+}
+
+.trigonometry {
+    background-color: rgb(71, 212, 107);
+}
+.operators {
+    background-color: orange;
+    color: rgb(78, 78, 78);
+}
+.digits {
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+.logs {
+    background-color: blueviolet;
+}
+.clearer {
+    background-color: brown;
+}
+.middle-school {
+    background-color: rgb(41, 106, 248);
+}
+.brackets {
+    background-color: rgb(63, 122, 248);
+}
+.brackets,.clearer,.logs,.middle-school {
+    color: rgb(204, 203, 203);
+}
+
+footer {
+    background-color: rgb(75, 75, 75);
+    text-align: center;
+    flex-shrink: 0;
+    height: 90px;
+    box-shadow: 0 0 36px black;
+}
+#copyright {
+    margin-top: 1%;
+}
+#links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 2%;
+    margin: 2%;
+}
+#links a {
+    transition: 0.35s;
+    color: rgb(224, 224, 224);
+    font-size: medium;
+}
+#links a:hover {
+    transition: 0.2s;
+    text-shadow: white 0 0 4px;
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
